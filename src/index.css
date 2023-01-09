@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Lato", sans-serif;
+}
+.navbar-topinfo {
+  font-family: "Arimo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  background: #024e82;
+  color: #ffffff;
+}
+.hero-h1 {
+  position: absolute;
+  /* left: 650px;
+  top: 296px;
+  width: 500px; */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 800;
+  /* font-size: 48px;
+  line-height: 48px; */
+  /* or 100% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.hero-button {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 21px; */
+  line-height: 22px;
+  /* identical to box height, or 105% */
+  position: absolute;
+  /* width: 175.16px;
+  height: 58px;
+  left: 800px;
+  top: 448px; */
+  display: block;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  border-radius: 3px;
+
+  /* Inside auto layout */
+  /* border: 5px solid #ffffff; */
+}
+.product_main_image {
+  width: 550px;
+  height: 685px;
+  object-fit: cover;
+}
+.product_image_bellow {
+  width: 130px;
+  height: 156px;
+  margin-top: 15px;
+  object-fit:cover;
+}
+.shipping-image{
+  width: 48px;
+  height: 48px;
+  object-fit:cover;
+
+}
+/* .order-button{
+  background-color: #eee;
+  border: none;
+  margin-top: 15px;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 10em;
+ 
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+ }
+ 
+ .order-button:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ .order-button:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ .order-button:disabled {
+  cursor: auto;
+  color: grey;
+ } */
+
+ .order-button {
+  
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+ }
+ 
+ .order-button::before {
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+ }
+ 
+ .order-button .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 10px;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+ }
+ 
+ .order-button .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+ }
+ 
+ .order-button .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .order-button .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .order-button:hover {
+  color: white;
+  background: black;
+ }
+ 
+ .order-button:hover::before {
+  width: 0.9375rem;
+  background: white;
+ }
+ 
+ .order-button:hover .text {
+  color: white;
+  padding-left: 1.5em;
+ }
+ 
+ .order-button:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .order-button:hover .bottom-key-1,
+  .order-button:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+ }
