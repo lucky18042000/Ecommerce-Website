@@ -10,28 +10,28 @@ function Shipping() {
       <Navbar />
       <div className="p-6">
         <div className="product-breadcums ">
-          <nav class="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700  navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+          <nav className="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-100 text-gray-500 hover:text-gray-700 focus:text-gray-700  navbar navbar-expand-lg navbar-light">
+            <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
               <nav
-                class="bg-grey-light rounded-md w-full"
+                className="bg-grey-light rounded-md w-full"
                 aria-label="breadcrumb"
               >
-                <ol class="list-reset flex">
+                <ol className="list-reset flex">
                   <li>
                     <a
                       href="#"
-                      class="text-gray-500 hover:text-gray-600 uppercase"
+                      className="text-gray-500 hover:text-gray-600 uppercase"
                     >
                       Home
                     </a>
                   </li>
                   <li>
-                    <span class="text-gray-500 mx-2">/</span>
+                    <span className="text-gray-500 mx-2">/</span>
                   </li>
                   <li>
                     <a
                       href="#"
-                      class="text-gray-500 hover:text-gray-600 uppercase"
+                      className="text-gray-500 hover:text-gray-600 uppercase"
                     >
                       Shopping Cart
                     </a>
@@ -52,15 +52,15 @@ function Shipping() {
             </ul>
           </div>
           <div className="pt-5">
-            <div class="flex items-start p-4 shadow-md rounded-t ">
+            <div className="flex items-start p-4 shadow-md rounded-t ">
               <button
                 type="button"
-                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 flex-wrap items-start dark:hover:bg-gray-600 dark:hover:text-white"
+                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 flex-wrap items-start dark:hover:bg-gray-600 dark:hover:text-white"
                 data-modal-hide="defaultModal"
               >
                 <svg
                   aria-hidden="true"
-                  class="w-5 h-5"
+                  className="w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ function Shipping() {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span class="sr-only">Close modal</span>
+                <span className="sr-only">Close modal</span>
               </button>
               <ul className="flex w-full justify-evenly items-center pl-20	">
                 <li className="shipping-image">
