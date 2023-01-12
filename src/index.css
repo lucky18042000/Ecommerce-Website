@@ -21,16 +21,16 @@
   color: #ffffff;
 }
 .hero-h1 {
-  position: absolute;
+  
   /* left: 650px;
-  top: 296px;
-  width: 500px; */
+  top: 296px;*/
+  width: auto; 
   font-family: "Lato";
   font-style: normal;
   font-weight: 800;
-  /* font-size: 48px;
-  line-height: 48px; */
-  /* or 100% */
+  
+  line-height: 48px; 
+  
 
   text-align: center;
   text-transform: uppercase;
@@ -43,14 +43,12 @@
   font-family: "Lato";
   font-style: normal;
   font-weight: 700;
-  /* font-size: 21px; */
+  font-size: 21px;
   line-height: 22px;
   /* identical to box height, or 105% */
-  position: absolute;
-  /* width: 175.16px;
+  width: 175.16px;
   height: 58px;
-  left: 800px;
-  top: 448px; */
+
   display: block;
 
   text-transform: uppercase;
@@ -59,8 +57,6 @@
 
   border-radius: 3px;
 
-  /* Inside auto layout */
-  /* border: 5px solid #ffffff; */
 }
 .product_main_image {
   width: 550px;
@@ -210,4 +206,17 @@
   .order-button:hover .bottom-key-2 {
   right: 0;
   width: 0;
+ }
+
+ /* cards will go here */
+.cards-main{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  
+  gap: 20px;
+}
+ .cards-image-img{
+  width: 295px;
+height: 342px;
  }

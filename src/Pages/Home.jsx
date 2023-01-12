@@ -17,6 +17,9 @@ function Home() {
     <div className='home'>
       <Navbar active={(false)}/>
       <Hero/>
+      <div className='cards-main justify-center'>
+      {cards}
+      </div>
       <Footer/>
     </div>
   )
