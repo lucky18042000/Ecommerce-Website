@@ -5,10 +5,10 @@ function Cards(product) {
   return (
     <div className='cards cursor-pointer'>
       <div className='cards-image'>
-        <img className='cards-image-img' src={product.goods_img} alt="" srcSet="" />
+        <img className='cards-image-img' src={product.image.url} alt={product.altImageUrl} srcSet="" />
       </div>
-      <h2 className='cards-name'>{product.goods_name}</h2>
-      <p className='cards-price'>{product.retailPrice.amountWithSymbol}</p>
+      <h2 className='cards-name w-52'>{product.productTitle}</h2>
+      <p className='cards-price'>${product.prices[0].regularPrice.minPrice}</p>
     </div>
   )
 }
