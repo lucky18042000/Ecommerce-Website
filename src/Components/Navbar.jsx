@@ -126,7 +126,7 @@ function Navbar(props) {
                 </div>
               </div>
               <CgProfile className="cursor-pointer self-center"></CgProfile>
-              <Link to='/shipping'>
+              <Link to='/shipping' className="flex items-center">
                 <FiShoppingBag className="cursor-pointer self-center"></FiShoppingBag>
               </Link>
             </div>
