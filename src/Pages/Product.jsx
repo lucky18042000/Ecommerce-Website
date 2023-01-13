@@ -232,7 +232,7 @@ function Product() {
                 </ul>
               </div>
             </div>
-            <button className="bg-primary text-text p-2 w-auto">
+            <button className="order-button ">
               ADD TO CART
             </button>
             <p>

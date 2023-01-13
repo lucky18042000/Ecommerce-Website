@@ -220,3 +220,17 @@
   width: 295px;
 height: 342px;
  }
+ .cards:hover {
+  opacity: 0.8;
+  transform: scale(1.10);
+  
+ }
+ .cards-info{
+  background-color: #ffffff;
+  /* border: 1px solid black; */
+ }
+ .cards-info:hover{
+  background-color: #000;
+  color: white;
+
+ }
