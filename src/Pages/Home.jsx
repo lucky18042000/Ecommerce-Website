@@ -32,7 +32,7 @@ function Home() {
   }, []);
   
   const cardlist = cards.map((item) => {
-    return <Cards key={item} {...item} />;
+    return <Cards key={item.webID} {...item} />;
   });
 console.log(cards)
   return (

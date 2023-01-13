@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
+import Footer from '../Components/Footer'
 import image from "../assets/unsplash_7RIMS-NMsbc.jpg";
 import pic from "../assets/pic.png";
 import { Link, Routes, Route } from "react-router-dom";
@@ -14,10 +15,27 @@ function About() {
         </h1>
         <img className="w-full" src={image} alt="loading" srcset="" />
       </div>
-      <div className="p-20 relative">
-        <button className="uppercase absolute border-2 border-text bg-text rounded bottom-40 left-1/4"><Link to="/product">Buy Now </Link></button>
-        <img src={pic} alt="loading" srcset="" />
+      <div className="flex flex-wrap m-5  gap-5">
+        <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
+          <img  src={pic} alt="loading" srcset="" />
+          <button className="box ">
+            <Link to="/product">Buy Now </Link>
+          </button>
+        </div>
+        <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
+          <img src={pic} alt="loading" srcset="" />
+          <button className="box ">
+            <Link to="/product">Buy Now </Link>
+          </button>
+        </div>
+        <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
+          <img src={pic} alt="loading" srcset="" />
+          <button className="box ">
+            <Link to="/product">Buy Now </Link>
+          </button>
+        </div>
       </div>
+      <Footer/>
     </div>
   );
 }
