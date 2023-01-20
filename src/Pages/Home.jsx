@@ -6,6 +6,7 @@ import About from "./About";
 import { Routes, Route } from "react-router-dom";
 import Cards from "../Components/Cards";
 import data from "./data";
+import { useLocation } from "react-router-dom";
 
 const options = {
   method: "GET",
@@ -18,24 +19,24 @@ const options = {
 function Home() {
   const [cards, setCards] = useState([]);
   const [popularCards, setPopularCards] = useState([]);
-//Womens Category
+  const location = useLocation();
+
   useEffect(() => {
-    fetch(
-      `https://fakestoreapi.com/products/category/women's clothing`,
-      options
-    )
+    window.scrollTo(0, 0);
+  }, [location.pathname === '/']);
+
+  //Womens Category
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/category/women's clothing`)
       .then((res) => res.json())
       .then((response) => {
         setCards(response);
       })
       .catch((err) => console.error(err));
   }, []);
-// mens Category
+  // mens Category
   useEffect(() => {
-    fetch(
-      `https://fakestoreapi.com/products/category/men's clothing`,
-      options
-    )
+    fetch(`https://fakestoreapi.com/products/category/men's clothing`, options)
       .then((res) => res.json())
       .then((response) => {
         setPopularCards(response);
@@ -65,7 +66,6 @@ function Home() {
       <div className="cards-main justify-center">{cardlistwomens}</div>
       <section class="text-gray-600 body-font">
         <div class="container py-24 mx-auto">
-          
           <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             <div class="p-4 md:w-1/4 flex">
               <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
@@ -83,12 +83,11 @@ function Home() {
               </div>
               <div class="flex-grow pl-6">
                 <h2 class="text-gray-900 text-lg title-font font-extrabold mb-2">
-                Free Shipping
+                  Free Shipping
                 </h2>
                 <p class="leading-relaxed text-base text-light">
-                Enjoy free shipping on all orders above $100
+                  Enjoy free shipping on all orders above $100
                 </p>
-                
               </div>
             </div>
             <div class="p-4 md:w-1/4 flex">
@@ -109,12 +108,11 @@ function Home() {
               </div>
               <div class="flex-grow pl-6">
                 <h2 class="text-gray-900 text-lg title-font font-extrabold mb-2">
-                SUPPORT 24/7
+                  SUPPORT 24/7
                 </h2>
                 <p class="leading-relaxed text-base text-light">
-                Our support team is there to help you for queries
+                  Our support team is there to help you for queries
                 </p>
-               
               </div>
             </div>
             <div class="p-4 md:w-1/4 flex">
@@ -134,12 +132,11 @@ function Home() {
               </div>
               <div class="flex-grow pl-6">
                 <h2 class="text-gray-900 text-lg title-font font-extrabold mb-2">
-                30 DAYS RETURN
+                  30 DAYS RETURN
                 </h2>
                 <p class="leading-relaxed text-base text-light">
-                Simply return it within 30 days for an exchange.
+                  Simply return it within 30 days for an exchange.
                 </p>
-              
               </div>
             </div>
             <div class="p-4 md:w-1/4 flex">
@@ -159,12 +156,11 @@ function Home() {
               </div>
               <div class="flex-grow pl-6">
                 <h2 class="text-gray-900 text-lg title-font font-extrabold mb-2">
-                100% PAYMENT SECURE
+                  100% PAYMENT SECURE
                 </h2>
                 <p class="leading-relaxed text-base text-light">
-                Our payments are secured with 256 bit encryption
+                  Our payments are secured with 256 bit encryption
                 </p>
-                
               </div>
             </div>
           </div>
@@ -174,7 +170,7 @@ function Home() {
         Top Sellers
         <br class="block" />
         <span className="text-primary text-xl leading-10">
-        Browse our top-selling products
+          Browse our top-selling products
         </span>
       </h1>
       <div className="cards-main justify-center">{cardlistmens}</div>

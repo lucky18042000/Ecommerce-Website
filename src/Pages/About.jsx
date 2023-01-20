@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from '../Components/Footer'
 import image from "../assets/unsplash_7RIMS-NMsbc.jpg";
 import pic from "../assets/pic.png";
+import menspic from '../assets/mens.png'
 import { Link, Routes, Route } from "react-router-dom";
 
 function About() {
@@ -15,25 +16,25 @@ function About() {
         </h1>
         <img className="w-full" src={image} alt="loading" srcset="" />
       </div>
-      <div className="flex flex-wrap m-5  gap-5">
-        <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
+      <div className="flex flex-wrap m-5 justify-center gap-5">
+        <div className="w-9/12  lg:w-2/5 felx flex-wrap justify-center items-center ">
           <img  src={pic} alt="loading" srcset="" />
           <button className="box ">
-            <Link to="/categorie">Buy Now </Link>
+            <Link to="/">Buy Now </Link>
           </button>
         </div>
-        <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
+        <div className="w-9/12 lg:w-2/5 felx flex-wrap justify-center items-center ">
+          <img src={menspic} alt="loading" srcset="" />
+          <button className="box ">
+            <Link to="/">Buy Now </Link>
+          </button>
+        </div>
+        {/* <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
           <img src={pic} alt="loading" srcset="" />
           <button className="box ">
             <Link to="/categorie">Buy Now </Link>
           </button>
-        </div>
-        <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
-          <img src={pic} alt="loading" srcset="" />
-          <button className="box ">
-            <Link to="/categorie">Buy Now </Link>
-          </button>
-        </div>
+        </div> */}
       </div>
       <Footer/>
     </div>

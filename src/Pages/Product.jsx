@@ -5,10 +5,16 @@ import image from "../assets/pic.png";
 import proimg1 from "../assets/beata-biskupicova-81IbsV021f0-unsplash.jpg";
 import proimg2 from "../assets/masaaki-komori-9ugEeqflo70-unsplash.jpg";
 import proimg3 from "../assets/okeykat-3QHmdjAXZAQ-unsplash.jpg";
-import { useParams } from "react-router-dom";
+import { useParams,useLocation } from "react-router-dom";
 function Product() {
   const [productData,setProductData] = useState({})
   const { id } = useParams();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname === `/product/${id}`]);
+ 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
     .then(res=>res.json())
