@@ -3,8 +3,10 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import proimg1 from "../assets/beata-biskupicova-81IbsV021f0-unsplash.jpg";
 import { Link } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 function Shipping() {
+  
+
   return (
     <div>
       <Navbar />

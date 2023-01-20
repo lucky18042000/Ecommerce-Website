@@ -19,19 +19,19 @@ function About() {
         <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
           <img  src={pic} alt="loading" srcset="" />
           <button className="box ">
-            <Link to="/product">Buy Now </Link>
+            <Link to="/categorie">Buy Now </Link>
           </button>
         </div>
         <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
           <img src={pic} alt="loading" srcset="" />
           <button className="box ">
-            <Link to="/product">Buy Now </Link>
+            <Link to="/categorie">Buy Now </Link>
           </button>
         </div>
         <div className="w-40 lg:w-96 felx flex-wrap justify-center items-center ">
           <img src={pic} alt="loading" srcset="" />
           <button className="box ">
-            <Link to="/product">Buy Now </Link>
+            <Link to="/categorie">Buy Now </Link>
           </button>
         </div>
       </div>

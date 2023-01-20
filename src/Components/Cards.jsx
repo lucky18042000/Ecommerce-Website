@@ -1,17 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import img from '../assets/beata-biskupicova-81IbsV021f0-unsplash.jpg'
 function Cards(product) {
 
   return (
-    <div className='cards cursor-pointer shadow-2xl rounded-3xl'>
+    <Link to={`/product/${product.id}`}>
+    <div className='cards cursor-pointer  rounded-3xl'>
       <div className='cards-image'>
-        <img className='cards-image-img' src={product.image.url} alt={product.altImageUrl} srcSet="" />
+        <img className='cards-image-img' src={product.image} alt='' srcSet="" />
       </div>
-      <div className=' cards-info bg-secondary h-28 bg-opacity-50 grid text-center rounded-b-3xl'>
-      <h2 className='cards-name ml-7 w-60 justify-center'>{product.productTitle}</h2>
-      <p className='cards-price text-primary'>${product.prices[0].regularPrice.minPrice}</p>
+      <div className=' cards-info  h-28 bg-opacity-50 grid text-center rounded-b-3xl'>
+      <h2 className='cards-name ml-7 w-60 justify-center font-bold'>{product.title}</h2>
+      <p className='cards-price text-primary'>${product.price}</p>
       </div>
     </div>
+    </Link>
   )
 }
 

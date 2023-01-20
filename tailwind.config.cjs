@@ -11,6 +11,7 @@ module.exports = {
       secondary: '#ecc94b',
       text:'#fff',
       offer:'#D6763C',
+      light:'#555555'
       // ...
     }
   },

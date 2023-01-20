@@ -1,12 +1,20 @@
-import React from "react";
+import React,{useEffect, useState}from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import image from "../assets/pic.png";
 import proimg1 from "../assets/beata-biskupicova-81IbsV021f0-unsplash.jpg";
 import proimg2 from "../assets/masaaki-komori-9ugEeqflo70-unsplash.jpg";
 import proimg3 from "../assets/okeykat-3QHmdjAXZAQ-unsplash.jpg";
-
+import { useParams } from "react-router-dom";
 function Product() {
+  const [productData,setProductData] = useState({})
+  const { id } = useParams();
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/${id}`)
+    .then(res=>res.json())
+    .then(json=>setProductData(json))
+  }, []);
+  console.log(productData)
   return (
     <div className="product">
       <Navbar />
@@ -18,7 +26,7 @@ function Product() {
             </p>
             <img
               className="product_main_image"
-              src={image}
+              src={productData.image}
               alt="product_image_loading"
               srcset=""
             />
@@ -59,7 +67,7 @@ function Product() {
                 </div>
               </nav>
             </div>
-            <h1 className="font-bold leading-10	text-4xl">Plain White Shirt</h1>
+            <h1 className="font-bold leading-10	text-4xl">{productData.title}</h1>
             <div className="ratting">
               <ul class="flex items-center	">
                 <li>
@@ -147,7 +155,7 @@ function Product() {
                     ></path>
                   </svg>
                 </li>
-                <li class="w-4 text-yellow-500">(15)</li>
+                <li class="w-4 text-yellow-500">()</li>
               </ul>
             </div>
             <div className="pricing flex gap-5">
@@ -155,14 +163,12 @@ function Product() {
                 className="text-2xl leading-7 line-through	"
                 style={{ color: "#818181" }}
               >
-                $69.00
+                ${productData.price}
               </h6>
               <h6 className="text-2xl leading-7">$59.00</h6>
             </div>
             <p>
-              A classic t-shirt never goes out of style. This is our most
-              premium collection of shirt. This plain white shirt is made up of
-              pure cotton and has a premium finish.
+            {productData && productData.description ? productData.description.slice(0, 118) + "..." : ""}
             </p>
             <div className="dropdown">
               <button
@@ -236,7 +242,7 @@ function Product() {
               ADD TO CART
             </button>
             <p>
-              <span>Category:</span>Women, Polo, Casual
+              <span>Category:</span>{productData.category}
             </p>
             <p>
               <span>Tags:</span>Modern, Design, cotton
@@ -366,18 +372,7 @@ function Product() {
               aria-labelledby="profile-tab"
             >
               <p class="text-sm text-gray-500 dark:text-gray-400">
-                A key objective is engaging digital marketing customers and
-                allowing them to interact with the brand through servicing and
-                delivery of digital media. Information is easy to access at a
-                fast rate through the use of digital communications. Users with
-                access to the Internet can use many digital mediums, such as
-                Facebook, YouTube, Forums, and Email etc. Through Digital
-                communications it creates a Multi-communication channel where
-                information can be quickly exchanged around the world by anyone
-                without any regard to whom they are.[28] Social segregation
-                plays no part through social mediums due to lack of face to face
-                communication and information being wide spread instead to a
-                selective audience.
+              {productData.description}
               </p>
             </div>
             <div
