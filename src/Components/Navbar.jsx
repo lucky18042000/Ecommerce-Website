@@ -126,8 +126,20 @@ function Navbar(props) {
                 </div>
               </div>
               <CgProfile className="cursor-pointer self-center"></CgProfile>
-              <Link to='/shipping' className="flex items-center">
-                <FiShoppingBag className="cursor-pointer self-center"></FiShoppingBag>
+              <Link to="/shipping" className=" flex items-center">
+                
+                  
+                  <FiShoppingBag className=" relative inline-flex cursor-pointer self-center"></FiShoppingBag>
+                  <div class="shoppingbagiconbadge">
+                    20
+                  </div>
+                
+
+                {/* <FiShoppingBag className=" relative cursor-pointer self-center">
+                  <div class="absolute ">
+                    20
+                  </div>
+                </FiShoppingBag> */}
               </Link>
             </div>
             <button

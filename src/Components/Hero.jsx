@@ -8,7 +8,7 @@ function Hero() {
         <h1 className="hero-h1 text-lg lg:text-5xl w-40">
           stylist picks beat the heat
         </h1>
-        <button className="hero-button  border-2 left-56 top-24 text-xs w-20">
+        <button href="#down" className="hero-button  border-2 left-56 top-24 text-xs w-20">
           Show Now
         </button>
       </div>

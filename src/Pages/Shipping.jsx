@@ -45,7 +45,7 @@ function Shipping() {
         </div>
         <div>
           <div className="pt-5">
-            <ul className="flex w-full justify-evenly items-center leading-6 text-xl font-bold pl-20	">
+            <ul className="hidden  lg:flex w-full justify-evenly items-center leading-6 text-xl font-bold pl-20	">
               <li>Product Img</li>
               <li>Product Name</li>
               <li>Price</li>
@@ -54,7 +54,7 @@ function Shipping() {
             </ul>
           </div>
           <div className="pt-5">
-            <div className="flex items-start p-4 shadow-md rounded-t ">
+            <div className="block lg:flex items-start p-4 shadow-md rounded-t ">
               <button
                 type="button"
                 className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 flex-wrap items-start dark:hover:bg-gray-600 dark:hover:text-white"
@@ -75,7 +75,7 @@ function Shipping() {
                 </svg>
                 <span className="sr-only">Close modal</span>
               </button>
-              <ul className="flex w-full justify-evenly items-center pl-20	">
+              <ul className="grid justify-center items-center lg:flex lg:flex-wrap w-full lg:justify-evenly pl-20	">
                 <li className="shipping-image">
                   <img
                     className="shipping-image"
@@ -88,7 +88,7 @@ function Shipping() {
                 <li className="text-2xl leading-7	" style={{ color: "#818181" }}>
                   $59.00
                 </li>
-                <li className="shadow px-4 py-2">1</li>
+                <li className="shadow px-4 py-2 flex justify-center">1</li>
                 <li className="text-2xl leading-7">$59.00</li>
               </ul>
             </div>

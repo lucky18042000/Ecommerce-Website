@@ -21,16 +21,14 @@
   color: #ffffff;
 }
 .hero-h1 {
-  
   /* left: 650px;
   top: 296px;*/
-  width: auto; 
+  width: auto;
   font-family: "Lato";
   font-style: normal;
   font-weight: 800;
-  
-  line-height: 48px; 
-  
+
+  line-height: 48px;
 
   text-align: center;
   text-transform: uppercase;
@@ -56,7 +54,6 @@
   color: #ffffff;
 
   border-radius: 3px;
-
 }
 .product_main_image {
   width: 550px;
@@ -67,13 +64,19 @@
   width: 130px;
   height: 156px;
   margin-top: 15px;
-  object-fit:cover;
+  object-fit: cover;
 }
-.shipping-image{
+.shipping-image {
   width: 48px;
   height: 48px;
-  object-fit:cover;
+  object-fit: cover;
+}
 
+@media (max-width: 600px) {
+  .shipping-image {
+    width: 160px;
+    height: 160px;
+  }
 }
 /* .order-button{
   background-color: #eee;
@@ -105,8 +108,7 @@
   color: grey;
  } */
 
- .order-button {
-  
+.order-button {
   background-color: transparent;
   border: 2px solid #000;
   border-radius: 0;
@@ -126,9 +128,9 @@
   transition: all 0.3s ease-in-out;
   user-select: none;
   font-size: 13px;
- }
- 
- .order-button::before {
+}
+
+.order-button::before {
   width: 1.5625rem;
   height: 2px;
   background: black;
@@ -138,9 +140,9 @@
   transform: translateY(-50%);
   transform-origin: center;
   transition: background 0.3s linear, width 0.3s linear;
- }
- 
- .order-button .text {
+}
+
+.order-button .text {
   font-size: 1.125em;
   line-height: 1.33333em;
   padding-left: 10px;
@@ -150,9 +152,9 @@
   text-transform: uppercase;
   text-decoration: none;
   color: black;
- }
- 
- .order-button .top-key {
+}
+
+.order-button .top-key {
   height: 2px;
   width: 1.5625rem;
   top: -2px;
@@ -160,9 +162,9 @@
   position: absolute;
   background: #e8e8e8;
   transition: width 0.5s ease-out, left 0.3s ease-out;
- }
- 
- .order-button .bottom-key-1 {
+}
+
+.order-button .bottom-key-1 {
   height: 2px;
   width: 1.5625rem;
   right: 1.875rem;
@@ -170,9 +172,9 @@
   position: absolute;
   background: #e8e8e8;
   transition: width 0.5s ease-out, right 0.3s ease-out;
- }
- 
- .order-button .bottom-key-2 {
+}
+
+.order-button .bottom-key-2 {
   height: 2px;
   width: 0.625rem;
   right: 0.625rem;
@@ -180,47 +182,47 @@
   position: absolute;
   background: #e8e8e8;
   transition: width 0.5s ease-out, right 0.3s ease-out;
- }
- 
- .order-button:hover {
+}
+
+.order-button:hover {
   color: white;
   background: black;
- }
- 
- .order-button:hover::before {
+}
+
+.order-button:hover::before {
   width: 0.9375rem;
   background: white;
- }
- 
- .order-button:hover .text {
+}
+
+.order-button:hover .text {
   color: white;
   padding-left: 1.5em;
- }
- 
- .order-button:hover .top-key {
+}
+
+.order-button:hover .top-key {
   left: -2px;
   width: 0px;
- }
- 
- .order-button:hover .bottom-key-1,
-  .order-button:hover .bottom-key-2 {
+}
+
+.order-button:hover .bottom-key-1,
+.order-button:hover .bottom-key-2 {
   right: 0;
   width: 0;
- }
+}
 
- /* cards will go here */
-.cards-main{
+/* cards will go here */
+.cards-main {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
-  
+
   gap: 20px;
 }
- .cards-image-img{
+.cards-image-img {
   width: 295px;
-height: 342px;
- }
- /* .cards:hover {
+  height: 342px;
+}
+/* .cards:hover {
   opacity: 0.8;
   transform: scale(1.10);
   
@@ -235,11 +237,11 @@ height: 342px;
 
  } */
 
- .box {
+.box {
   width: 100%;
   height: auto;
   float: left;
-  transition: .5s linear;
+  transition: 0.5s linear;
   position: relative;
   display: block;
   overflow: hidden;
@@ -253,7 +255,7 @@ height: 342px;
 
 .box:before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: 0;
   height: 4px;
@@ -266,7 +268,7 @@ height: 342px;
 
 .box:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
@@ -285,13 +287,79 @@ height: 342px;
   border-color: #262626;
   height: 100%;
   transform: translateX(0);
-  transition: .3s transform linear, .3s height linear .3s;
+  transition: 0.3s transform linear, 0.3s height linear 0.3s;
 }
 
 .box:hover:after {
   border-color: #262626;
   height: 100%;
   transform: translateX(0);
-  transition: .3s transform linear, .3s height linear .5s;
+  transition: 0.3s transform linear, 0.3s height linear 0.5s;
+}
+.shoppingbagiconbadge {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 36px;
+  right: 10px;
+  border-radius: 40px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  background: #024e82;
+  color: #ffffff;
 }
 
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+  .shoppingbagiconbadge {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 36px;
+    right: 42px;
+    border-radius: 40px;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    justify-content: center;
+    font-size: 10px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    background: #024e82;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 600px) {
+  .shoppingbagiconbadge {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 28px;
+    right: 40px;
+    border-radius: 40px;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    justify-content: center;
+    font-size: 10px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    background: #024e82;
+    color: #ffffff;
+  }
+}
